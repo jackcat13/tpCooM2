@@ -1,0 +1,10 @@
+package model;
+
+public class Groupe {
+
+	public String getInfoGroup() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

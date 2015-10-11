@@ -1,0 +1,9 @@
+package model;
+
+public class Portail_GLaDOS {
+
+	
+	public ArrayList<Groupe> getListGroupOfCurrentUser(){
+		
+	}
+}
