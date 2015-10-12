@@ -1,0 +1,24 @@
+package model;
+
+import java.util.ArrayList;
+
+public class Personne {
+	
+	private ArrayList<Groupe> listGroupe;
+
+	public ArrayList<Groupe> getListGroup() {
+		return listGroupe;
+	}
+
+	/*
+	 * 
+	 * Getters and setters
+	 */
+	public ArrayList<Groupe> getListGroupe() {
+		return listGroupe;
+	}
+
+	public void setListGroupe(ArrayList<Groupe> listGroupe) {
+		this.listGroupe = listGroupe;
+	}
+}

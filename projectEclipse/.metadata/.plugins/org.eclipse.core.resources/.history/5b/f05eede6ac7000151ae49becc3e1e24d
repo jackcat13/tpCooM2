@@ -1,0 +1,22 @@
+package model;
+
+import java.util.ArrayList;
+
+public class Portail_GLaDOS {
+	
+	private ArrayList<Personne> listPersonne = new ArrayList<Personne>();
+
+	public Portail_GLaDOS(){
+		
+	}
+	
+	public ArrayList<Groupe> getListGroupOfCurrentUser(){
+		
+		
+		return null;
+	}
+	
+	public String getInfoGroupe(Groupe group){
+		return group.getInfoGroup();
+	}
+}

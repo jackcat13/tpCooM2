@@ -1,0 +1,32 @@
+package model;
+
+import java.util.ArrayList;
+
+public class Portail_GLaDOS {
+	
+	private ArrayList<Personne> listPersonne;
+	private ArrayList<Groupe> listGroupe;
+	
+	//On gère actuellement l'utilisateur connecté en dur dans le code
+	//car l'authentification n'est pas encore implémenté
+	private Personne currentUser;
+
+	public Portail_GLaDOS(){
+		listPersonne = new ArrayList<Personne>();
+		listGroupe = new ArrayList<Groupe>();
+	}
+	
+	public ArrayList<Groupe> getListGroupOfCurrentUser(){
+		
+		
+		return null;
+	}
+	
+	public ArrayList<Groupe> getListGroupOfCurrentUser(){
+		
+	}
+	
+	public String selectGroup(Groupe group){
+		return group.getInfoGroup();
+	}
+}

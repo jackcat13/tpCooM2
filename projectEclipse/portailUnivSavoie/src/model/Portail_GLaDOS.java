@@ -3,15 +3,64 @@ package model;
 import java.util.ArrayList;
 
 public class Portail_GLaDOS {
+	
+	private ArrayList<Personne> listPersonne;
+	private ArrayList<Groupe> listGroupe;
+	
+	//On gère actuellement l'utilisateur connecté en dur dans le code
+	//car l'authentification n'est pas encore implémentée
+	private Personne currentUser;
 
+	public Portail_GLaDOS(){
+		listPersonne = new ArrayList<Personne>();
+		listGroupe = new ArrayList<Groupe>();
+		
+		Personne pafLeChien = new Personne("pafLeChien");
+		listPersonne.add(pafLeChien);
+		currentUser = pafLeChien;
+		creerGroupe("groupeDePaf");
+	}
 	
 	public ArrayList<Groupe> getListGroupOfCurrentUser(){
-		
-		
-		return null;
+		return currentUser.getListGroup();
 	}
 	
-	public String getInfoGroupe(Groupe group){
+	public Groupe creerGroupe(String nomGroupe){
+		Groupe groupe = currentUser.creerGroupe(nomGroupe);
+		listGroupe.add(groupe);
+		return groupe;
+	}
+	
+	public String selectGroup(Groupe group){
 		return group.getInfoGroup();
 	}
+
+	/*
+	 * 
+	 * Setters and getters
+	 */
+	public ArrayList<Personne> getListPersonne() {
+		return listPersonne;
+	}
+
+	public void setListPersonne(ArrayList<Personne> listPersonne) {
+		this.listPersonne = listPersonne;
+	}
+
+	public ArrayList<Groupe> getListGroupe() {
+		return listGroupe;
+	}
+
+	public void setListGroupe(ArrayList<Groupe> listGroupe) {
+		this.listGroupe = listGroupe;
+	}
+
+	public Personne getCurrentUser() {
+		return currentUser;
+	}
+
+	public void setCurrentUser(Personne currentUser) {
+		this.currentUser = currentUser;
+	}
+	
 }
